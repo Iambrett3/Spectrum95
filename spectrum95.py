@@ -2,8 +2,9 @@
 
 def main():
     line = "here is a line of input that will be divided into blocks it's kind of long"
-    print createBlocks(line)
-    #print createBlocks(line)
+    for word in createBlocks(line):
+        print ':'.join(x.encode('hex') for x in word)
+    
     # Color test
     #print(''.join(['\033[' + str(x) + 'mFOO' for x in range(0,150)]) +'\033[0m')
 
