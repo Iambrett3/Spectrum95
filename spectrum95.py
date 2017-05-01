@@ -2,7 +2,9 @@
 
 def main():
     line = "here is a line of input that will be divided into blocks it's kind of long"
+    print line
     for word in createBlocks(line):
+        # Encode each char as hex int, only works for ASCII
         print ':'.join(x.encode('hex') for x in word)
     
     # Color test
